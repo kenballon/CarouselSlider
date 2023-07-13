@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#a47cf4">
+    <meta name="description" content="HRD Summit Melbourne">
+    <title>HRD Summit Melbourne</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <script src="./src/scripts/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="header-nav-wrapper container">
+            <div class="navbar-brand logo-wrapper">
+                <picture>
+                    <img src="./src/assets/images/HRDSM.webp" width="200" height="100%" alt="HRD Summit Logo Image"
+                        loading="lazy">
+                </picture>
+            </div>
+            <div class="nav-sponsor-wrapper">
+                <!-- navigation on large view -->
+                <nav class="navbar navbar-light ms-auto gap-4 d-hide-on-sm">
+                    <ul class="navbar-nav flex-row gap-4 ">
+                        <li class="nav-item"><a href="#agendaSection" class="nav-link">Agenda</a></li>
+                        <li class="nav-item"><a href="#speakers" class="nav-link">Speakers</a></li>
+                        <li class="nav-item"><a href="#sponsors" class="nav-link">Sponsors</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Get In Touch</a></li>
+                    </ul>
+                    <div class="reg-cta-btn" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        <a href="#">Register Now</a>
+                    </div>
+                </nav>
+                <!-- Event Partner or Sponsors -->
+                <div class="event-partner-logo-container">
+                    <span>Event Partner</span>
+                    <picture>
+                        <img src="./src/assets/images/HRSM22-Sponsor-Reward-Gateway-260x120-1.webp"
+                            alt="sponsor logo image" width="200" height="100%" loading="lazy">
+                    </picture>
+                </div>
+                <!-- show on small devices -->
+                <div class="mobile-menu-wrapper d-lg-none">
+                    <button aria-label="Open Navigation" tabindex="0" class="nav-toggle" id="openCloseMobileNav">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 45 25" aria-hidden="true"
+                            class="nav-toggle__svg nav-toggle__svg--menu">
+                            <path d="M0 .5h45"></path>
+                            <path d="M0 12.5h45"></path>
+                            <path d="M0 24.5h45"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 26" aria-hidden="true"
+                            class="nav-toggle__svg nav-toggle__svg--close">
+                            <path d="M24.293 1.354.716 24.931"></path>
+                            <path d="m.354.646 23.577 23.578"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu nav links -->
+        <div class="navigation-links-parent">
+            <div class="mobile-menu-container d-flex flex-column">
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-item-mobile"><a href="#agendaSection" class="nav-link">Agenda</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Speakers</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Sponsors</a></li>
+                    <li class="nav-item nav-item-mobile"><a href="#" class="nav-link">Get In Touch</a></li>
+                </ul>
+                <div class="social-menu-wrapper">
+                    <div class="reg-cta-btn nav-item-mobile" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        <a href="#">Register Now</a>
+                    </div>
+                    <ul class="sm-social-list-wrapper">
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                LinkedIn
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                Twitter
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="sm-social-link-item nav-item-mobile">
+                            <a href="#" class="nav-link">
+                                Facebook
+                                <span class="mobile-nav__social-svg-wrapper">
+                                    <svg width="44" height="37" viewBox="0 0 37 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.9912 2.21289L35.2134 15.2129M35.2134 15.2129L21.9912 28.2129M35.2134 15.2129L1.21338 15.2129"
+                                            stroke="#9747FF" stroke-width="2" stroke-linecap="square" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+
+        <!-- Hero Banner -->
+        <section class="hero-banner-sec py-0 py-lg-5">
+            <div class="container-lg px-lg-2 p-0">
+                <div class="hero-bg text-white">
+                    <div
+                        class="hero-content-wrapper d-flex align-items-center px-3 px-md-5 py-5 col-lg-7 col-md-12 text-lg-start text-center">
+                        <div class="hero-content">
+                            <h1 class="mb-3">People-first leadership for the new world of work</h1>
+                            <p class="mb-5">Navigate hybrid work, talent retention and digital transformation to
+                                drive
+                                positive
+                                change in your organisation</p>
+                            <div class="mb-3"><time>July 26-27, 2023</time> | Crown Conference Center</div>
+                            <div class="hero-btn-wrapper">
+                                <a href="#" class="btn btn-secondary text-white">Download Brochure</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured_company">
+            <div class="container py-5">
+                <h2 class="display-5 fw-bold pb-2">Carousel Stuff</h2>
+                <div class="marquee-wrapper">
+                    <div class="marquee-content scrollingX">
+                        <div class="card">
+                            <picture>
+                                <img src="./src/assets/images/feat_co_1.png" class="cursor-pointer img-fluid"
+                                    data-bs-toggle="modal" data-bs-target="#companyModal" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="./src/assets/images/feat_co_6.png" class="img-fluid" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="./src/assets/images/feat_co_5.png" class="img-fluid" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="./src/assets/images/feat_co_3.png" class="img-fluid" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="card">
+                            <picture>
+                                <img src="./src/assets/images/feat_co_2.png" class="cursor-pointer img-fluid"
+                                    data-bs-toggle="modal" data-bs-target="#companyModal" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF Featured Company -->
+
+        <!-- Testimonial Carousel Slider  -->
+        <section class="testimonial-section">
+            <div class="container">
+                <div class="textimonial-section__heading-details">
+                    <article class="heading-sub-wrapper">
+                        <h2 class="display-5 fw-bold text-center mb-3">Testimonial</h2>
+                        <h3 class="lead mb-5 text-center">Real Stories, Real Impact: Hear from HR Summit Melbourne
+                            attendees as they
+                            share their
+                            inspiring experiences and the positive outcomes they achieved.</h3>
+                    </article>
+                </div>
+                <div class="carousel">
+                    <button class="carousel_btn handle_prev-slide d-none" aria-label="Next Button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                            <path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z" />
+                        </svg>
+                    </button>
+
+                    <ul class="carousel__slider-wrapper">
+                        <!-- repreatable list -->
+                        <li class="carousel-slide">
+                            <div class="carousel-slide-inner slide-content">
+                                <div class="quote-wrapper">
+                                    <svg width="27" height="21" viewBox="0 0 27 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 21V15.4737C0 13.7953 0.292601 12.0146 0.877802 10.1316C1.48318 8.22807 2.3509 6.3962 3.48094 4.63597C4.63117 2.85526 6.01345 1.30994 7.6278 0L11.5022 3.19298C10.2309 5.03509 9.12108 6.95906 8.17265 8.96491C7.24439 10.9503 6.78027 13.0789 6.78027 15.3509V21H0ZM15.4978 21V15.4737C15.4978 13.7953 15.7904 12.0146 16.3756 10.1316C16.9809 8.22807 17.8487 6.3962 18.9787 4.63597C20.1289 2.85526 21.5112 1.30994 23.1256 0L27 3.19298C25.7287 5.03509 24.6188 6.95906 23.6704 8.96491C22.7422 10.9503 22.278 13.0789 22.278 15.3509V21H15.4978Z"
+                                            fill="#9747FF" />
+                                    </svg>
+
+                                </div>
+                                <div class="actual-testimonial-quote">
+                                    <blockquote>
+                                        It’s so important for companies to have a safety-minded focus and we
+                                        recognize that that takes a lot of dedication, focus and effort.This is a
+                                        great opportunity to connect with safety-minded individuals and really put a
+                                        focus on keeping Canadian workers safe and going home safe at the end of the
+                                        day.
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="carousel-slide-inner content-slide-img-wrapper">
+                                <div class="prof-img__testimonial">
+                                    <article>
+                                        <picture class="d-flex justify-content-center">
+                                            <img src="/src/assets/images/speaker2.jpg" alt="" class="prof-img-item"
+                                                width="46" height="56" loading="lazy">
+                                        </picture>
+                                        <h4 class="persona-testi-prof-name">Julie Mcfater</h4>
+                                        <div class="persona-testi-prof-role">Director of Marketing,
+                                            <span class="persona-company-affil">Levitt-Safety</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="carousel-slide-inner slide-content">
+                                <div class="quote-wrapper">
+                                    <svg width="27" height="21" viewBox="0 0 27 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 21V15.4737C0 13.7953 0.292601 12.0146 0.877802 10.1316C1.48318 8.22807 2.3509 6.3962 3.48094 4.63597C4.63117 2.85526 6.01345 1.30994 7.6278 0L11.5022 3.19298C10.2309 5.03509 9.12108 6.95906 8.17265 8.96491C7.24439 10.9503 6.78027 13.0789 6.78027 15.3509V21H0ZM15.4978 21V15.4737C15.4978 13.7953 15.7904 12.0146 16.3756 10.1316C16.9809 8.22807 17.8487 6.3962 18.9787 4.63597C20.1289 2.85526 21.5112 1.30994 23.1256 0L27 3.19298C25.7287 5.03509 24.6188 6.95906 23.6704 8.96491C22.7422 10.9503 22.278 13.0789 22.278 15.3509V21H15.4978Z"
+                                            fill="#9747FF" />
+                                    </svg>
+
+                                </div>
+                                <div class="actual-testimonial-quote">
+                                    <blockquote>
+                                        It’s so important for companies to have a safety-minded focus and we
+                                        recognize that that takes a lot of dedication, focus and effort.This is a
+                                        great opportunity to connect with safety-minded individuals and really put a
+                                        focus on keeping Canadian workers safe and going home safe at the end of the
+                                        day.
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="carousel-slide-inner content-slide-img-wrapper">
+                                <div class="prof-img__testimonial">
+                                    <article>
+                                        <picture class="d-flex justify-content-center">
+                                            <img src="/src/assets/images/speaker2.jpg" alt="" class="prof-img-item"
+                                                width="46" height="56" loading="lazy">
+                                        </picture>
+                                        <h4 class="persona-testi-prof-name">Julie Mcfater</h4>
+                                        <div class="persona-testi-prof-role">Director of Marketing,
+                                            <span class="persona-company-affil">Levitt-Safety</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="carousel-slide-inner slide-content">
+                                <div class="quote-wrapper">
+                                    <svg width="27" height="21" viewBox="0 0 27 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 21V15.4737C0 13.7953 0.292601 12.0146 0.877802 10.1316C1.48318 8.22807 2.3509 6.3962 3.48094 4.63597C4.63117 2.85526 6.01345 1.30994 7.6278 0L11.5022 3.19298C10.2309 5.03509 9.12108 6.95906 8.17265 8.96491C7.24439 10.9503 6.78027 13.0789 6.78027 15.3509V21H0ZM15.4978 21V15.4737C15.4978 13.7953 15.7904 12.0146 16.3756 10.1316C16.9809 8.22807 17.8487 6.3962 18.9787 4.63597C20.1289 2.85526 21.5112 1.30994 23.1256 0L27 3.19298C25.7287 5.03509 24.6188 6.95906 23.6704 8.96491C22.7422 10.9503 22.278 13.0789 22.278 15.3509V21H15.4978Z"
+                                            fill="#9747FF" />
+                                    </svg>
+
+                                </div>
+                                <div class="actual-testimonial-quote">
+                                    <blockquote>
+                                        It’s so important for companies to have a safety-minded focus and we
+                                        recognize that that takes a lot of dedication, focus and effort.This is a
+                                        great opportunity to connect with safety-minded individuals and really put a
+                                        focus on keeping Canadian workers safe and going home safe at the end of the
+                                        day.
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="carousel-slide-inner content-slide-img-wrapper">
+                                <div class="prof-img__testimonial">
+                                    <article>
+                                        <picture class="d-flex justify-content-center">
+                                            <img src="/src/assets/images/speaker2.jpg" alt="" class="prof-img-item"
+                                                width="46" height="56" loading="lazy">
+                                        </picture>
+                                        <h4 class="persona-testi-prof-name">Julie Mcfater</h4>
+                                        <div class="persona-testi-prof-role">Director of Marketing,
+                                            <span class="persona-company-affil">Levitt-Safety</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="carousel-slide-inner slide-content">
+                                <div class="quote-wrapper">
+                                    <svg width="27" height="21" viewBox="0 0 27 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 21V15.4737C0 13.7953 0.292601 12.0146 0.877802 10.1316C1.48318 8.22807 2.3509 6.3962 3.48094 4.63597C4.63117 2.85526 6.01345 1.30994 7.6278 0L11.5022 3.19298C10.2309 5.03509 9.12108 6.95906 8.17265 8.96491C7.24439 10.9503 6.78027 13.0789 6.78027 15.3509V21H0ZM15.4978 21V15.4737C15.4978 13.7953 15.7904 12.0146 16.3756 10.1316C16.9809 8.22807 17.8487 6.3962 18.9787 4.63597C20.1289 2.85526 21.5112 1.30994 23.1256 0L27 3.19298C25.7287 5.03509 24.6188 6.95906 23.6704 8.96491C22.7422 10.9503 22.278 13.0789 22.278 15.3509V21H15.4978Z"
+                                            fill="#9747FF" />
+                                    </svg>
+
+                                </div>
+                                <div class="actual-testimonial-quote">
+                                    <blockquote>
+                                        It’s so important for companies to have a safety-minded focus and we
+                                        recognize that that takes a lot of dedication, focus and effort.This is a
+                                        great opportunity to connect with safety-minded individuals and really put a
+                                        focus on keeping Canadian workers safe and going home safe at the end of the
+                                        day.
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="carousel-slide-inner content-slide-img-wrapper">
+                                <div class="prof-img__testimonial">
+                                    <article>
+                                        <picture class="d-flex justify-content-center">
+                                            <img src="/src/assets/images/speaker2.jpg" alt="" class="prof-img-item"
+                                                width="46" height="56" loading="lazy">
+                                        </picture>
+                                        <h4 class="persona-testi-prof-name">Julie Mcfater</h4>
+                                        <div class="persona-testi-prof-role">Director of Marketing,
+                                            <span class="persona-company-affil">Levitt-Safety</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="carousel-slide-inner slide-content">
+                                <div class="quote-wrapper">
+                                    <svg width="27" height="21" viewBox="0 0 27 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 21V15.4737C0 13.7953 0.292601 12.0146 0.877802 10.1316C1.48318 8.22807 2.3509 6.3962 3.48094 4.63597C4.63117 2.85526 6.01345 1.30994 7.6278 0L11.5022 3.19298C10.2309 5.03509 9.12108 6.95906 8.17265 8.96491C7.24439 10.9503 6.78027 13.0789 6.78027 15.3509V21H0ZM15.4978 21V15.4737C15.4978 13.7953 15.7904 12.0146 16.3756 10.1316C16.9809 8.22807 17.8487 6.3962 18.9787 4.63597C20.1289 2.85526 21.5112 1.30994 23.1256 0L27 3.19298C25.7287 5.03509 24.6188 6.95906 23.6704 8.96491C22.7422 10.9503 22.278 13.0789 22.278 15.3509V21H15.4978Z"
+                                            fill="#9747FF" />
+                                    </svg>
+
+                                </div>
+                                <div class="actual-testimonial-quote">
+                                    <blockquote>
+                                        It’s so important for companies to have a safety-minded focus and we
+                                        recognize that that takes a lot of dedication, focus and effort.This is a
+                                        great opportunity to connect with safety-minded individuals and really put a
+                                        focus on keeping Canadian workers safe and going home safe at the end of the
+                                        day.
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="carousel-slide-inner content-slide-img-wrapper">
+                                <div class="prof-img__testimonial">
+                                    <article>
+                                        <picture class="d-flex justify-content-center">
+                                            <img src="/src/assets/images/speaker2.jpg" alt="" class="prof-img-item"
+                                                width="46" height="56" loading="lazy">
+                                        </picture>
+                                        <h4 class="persona-testi-prof-name">Julie Mcfater</h4>
+                                        <div class="persona-testi-prof-role">Director of Marketing,
+                                            <span class="persona-company-affil">Levitt-Safety</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="carousel_btn handle_next-slide" aria-label="Next Button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                            <path d="m304-82-56-57 343-343-343-343 56-57 400 400L304-82Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- End of Testimonial Carousel Slider  -->
+
+    </main>
+    <!-- Register Now Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="modal-body px-4 pt-0 pb-5 bg-white">
+                    <div class="py-5">
+                        <h2 class="display-5 fw-bold">Registration</h2>
+                        <p class="lead">See our partners and sponsors during this event to give you the best
+                            experience.</p>
+                    </div>
+                    <!-- Bizzabo Tickets Widget Start -->
+                    <!-- <div class="bizzabo-tickets-widget" data-event-id="483580"
+                        data-params="isInMinisite=true&widgetId=278051"></div>
+                    <script type="text/javascript" defer>
+                        (function () {
+                            var bz = document.createElement("script");
+                            bz.type = "text/javascript";
+                            bz.async = true;
+                            bz.src = "https://organizer.bizzabo.com/widgets/tickets/tickets.js";
+                            var s = document.getElementsByTagName("script")[0];
+                            s.parentNode.insertBefore(bz, s);
+                        })();
+                    </script> -->
+                    <!-- Bizzabo Tickets Widget End -->
+                </div>
+                <div class="modal-footer border-top-0 mt-3 cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="me-auto">Close Registration</div>
+                    <img src="./src/assets/images/close_btn.svg" class="img-fluid" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Register Now Modal -->
+    <!-- Speakers Modal -->
+    <div class="modal fade" id="speakerModal" tabindex="-1" aria-labelledby="speakerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="modal-header px-4 py-5 bg-white border-bottom-0 d-block">
+                    <div class="d-block d-lg-flex align-items-center text-center text-lg-start">
+                        <div class="m-auto w-100">
+                            <img src="./src/assets/images/speaker_modal.png" class="img-fluid mb-3 mb-lg-0"
+                                loading="lazy">
+                        </div>
+                        <div>
+                            <h4>Janice Thomas Cagle</h4>
+                            <div class="desc">Full Professor, Université de Montréal & Founder and Scientific Director,
+                                Mila – Quebec
+                                AI
+                                Institute</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body px-4 pt-0 pb-5 bg-white">
+                    <p>Lorem ipsum dolor sit amet consectetur. Lobortis eu enim dui imperdiet pretium nulla viverra.
+                        Viverra
+                        mollis dolor dignissim amet a. Convallis enim lorem elit facilisis faucibus lacinia euismod at
+                        pellentesque. Duis eu mauris pretium scelerisque. Sed penatibus adipiscing quis in suspendisse
+                        in
+                        neque facilisis. Metus nunc quam gravida tellus egestas nam neque. Neque ut auctor in cursus
+                        feugiat
+                        ultrices dui.</p>
+                    <p>
+                        Ultricies urna mattis viverra maecenas. Maecenas convallis fermentum praesent tellus. Venenatis
+                        amet
+                        in nullam tincidunt enim cursus. Diam sit vestibulum volutpat quam in non dictum. Massa ipsum
+                        morbi
+                        in turpis eros commodo adipiscing. Ut feugiat ultricies ut velit enim sed. Tincidunt vel
+                        scelerisque
+                        tellus sit adipiscing dui. Proin nibh aliquam facilisis mattis tristique. Mi arcu vitae
+                        consequat
+                        augue feugiat. Sed nunc donec sed odio. Mattis egestas volutpat sapien justo vel id lacus
+                        faucibus
+                        risus. Et sagittis at rutrum vitae mauris ac sit varius convallis. Volutpat egestas dui egestas
+                        commodo blandit est.</p>
+                </div>
+                <div class="modal-footer border-top-0 mt-3 cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="me-auto">Back to Speakers</div>
+                    <img src="./src/assets/images/close_btn.svg" class="img-fluid" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Speakers Modal -->
+    <!-- Agenda Modal -->
+    <div class="modal fade" id="agendaModal" tabindex="-1" aria-labelledby="agendaModalLabel" aria-hidden="true">
+        <div class="agenda-modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="modal-header px-4 pt-5 pb-2 bg-white border-bottom-0 d-block">
+                    <article class="scheduled-time">
+                        <span class="schedulted__time">
+                            08:15
+                        </span>
+                        <span class="schedulted__time_ampm">
+                            am
+                        </span>
+                    </article>
+                    <article class="agenda_heading-title">
+                        <h3>OPENING KEYNOTE: Unbreakable – Finding Courage In The Face Of Adversity
+                        </h3>
+                    </article>
+                </div>
+                <div class="modal-body px-4 pt-0 pb-5 bg-white">
+                    <div class="agenda__long-desc">
+                        <p style="margin-bottom:1rem;">Every insurance leader needs a strong personal brand that evolves
+                            as you advance in your
+                            career. It’s a matter of continually crafting and curating the skills and experience that
+                            make you, you! In this session, gain advice on how to best articulate your personal brand,
+                            in and out of the office, and how it can be the key differentiator in your career.</p>
+                        <ul class="long-desc agenda__ul-list-wrapper">
+                            <li>How to make a strong, lasting impression – from the office, in the boardroom, or at your
+                                dining room table</li>
+                            <li>Improving your digital footprint: leveraging popular social platforms like LinkedIn to
+                                market and build your brand</li>
+                            <li>Tips for engaging internal sponsors to be your advocates</li>
+                            <li>Using your everyday creativity to help you emerge as an authentic leader</li>
+                        </ul>
+                    </div>
+                    <!-- repeatable panel host block -->
+                    <div class="host-or-panel__block">
+                        <article class="host-panel-heading">
+                            <h5>Moderator/Host</h5>
+                        </article>
+                        <article class="img-name-card d-grid gap-2">
+                            <!-- repeatable host, moderator or panel person -->
+                            <div class="card-repeat__host-panel">
+                                <picture>
+                                    <img src="./src/assets/images/agenda-host-img.jpg" alt="host-panel-image"
+                                        loading="lazy">
+                                </picture>
+                                <div class="name-n-job-title">
+                                    <h6 class="name">
+                                        Kylie Speer
+                                    </h6>
+                                    <p class="job-title-n-company">
+                                        <span class="job-tile">Host</span>
+                                        <span class="job-company">Key Media Inc</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="host-or-panel__block">
+                        <article class="host-panel-heading">
+                            <h5>Panel</h5>
+                        </article>
+                        <article class="img-name-card d-grid gap-2">
+                            <!-- repeatable host, moderator or panel person -->
+                            <div class="card-repeat__host-panel">
+                                <picture>
+                                    <img src="./src/assets/images/agenda-host-img.jpg" alt="host-panel-image"
+                                        loading="lazy">
+                                </picture>
+                                <div class="name-n-job-title">
+                                    <h6 class="name">
+                                        Kylie Speer
+                                    </h6>
+                                    <p class="job-title-n-company">
+                                        <span class="job-tile">Head of Partnerships at Bay</span>
+                                        <span class="job-company">Key Media Inc</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-repeat__host-panel">
+                                <picture>
+                                    <img src="./src/assets/images/agenda-host-img.jpg" alt="host-panel-image"
+                                        loading="lazy">
+                                </picture>
+                                <div class="name-n-job-title">
+                                    <h6 class="name">
+                                        Kylie Speer
+                                    </h6>
+                                    <p class="job-title-n-company">
+                                        <span class="job-tile">Head of Partnerships at Bay</span>
+                                        <span class="job-company">Key Media Inc</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-repeat__host-panel">
+                                <picture>
+                                    <img src="./src/assets/images/agenda-host-img.jpg" alt="host-panel-image"
+                                        loading="lazy">
+                                </picture>
+                                <div class="name-n-job-title">
+                                    <h6 class="name">
+                                        Kylie Speer
+                                    </h6>
+                                    <p class="job-title-n-company">
+                                        <span class="job-tile">Head of Partnerships at Bay</span>
+                                        <span class="job-company">Key Media Inc</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- repeatable panel host block -->
+                </div>
+                <div class="modal-footer border-top-0 mt-3 cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="me-auto">Back to Speakers</div>
+                    <img src="./src/assets/images/close_btn.svg" class="img-fluid" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Agenda Modal -->
+    <!-- Company Modal -->
+    <div class="modal fade" id="companyModal" tabindex="-1" aria-labelledby="companyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="modal-header px-4 py-5 bg-white border-bottom-0 d-block text-center">
+                    <img src="./src/assets/images/sponsor_rewardGateway.png" class="img-fluid" loading="lazy">
+                </div>
+                <div class="modal-body px-4 pt-0 pb-5 bg-white">
+                    <p class="mb-5">Reward Gateway helps companies engage, motivate and retain people – every day, all
+                        over
+                        the world. Partnering with over 4,000 companies in 23 countries, we empower more than 6.5
+                        million
+                        employees to connect, appreciate and support one another to make the world a better place to
+                        work.
+                        Our unified employee engagement hub provides the best of recognition, reward, surveys, benefits
+                        and
+                        discounts that support the overall wellbeing of our client’s employees, enriching their talent
+                        acquisition, retention and values-driven growth. Our clients include American Express, Unilever,
+                        Samsung, IBM, McDonald’s and more.</p>
+                    <div class="contact-details">
+                        <div class="contact-details-lbl">CONTACT DETAILS:</div>
+                        <h4 class="company-lbl">Reward Gateway</h4>
+                        <div class="contact-list">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <img src="./src/assets/images/icon_phone.svg" class="img-fluid" loading="lazy">
+                                </div>
+                                <div>
+                                    <div>(02) 9112 0100</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <img src="./src/assets/images/icon_mail.svg" class="img-fluid" loading="lazy">
+                                </div>
+                                <div>
+                                    <a href="mailto:engage@rewardgateway.com">engage@rewardgateway.com</a>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <img src="./src/assets/images/icon_globe.svg" class="img-fluid" loading="lazy">
+                                </div>
+                                <div>
+                                    <a href="rewardgateway.com/au" target="_blank">rewardgateway.com/au</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 mt-3 cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="me-auto">Close</div>
+                    <img src="./src/assets/images/close_btn.svg" class="img-fluid" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Company Modal-->
+    <!-- Footer section  -->
+    <footer>
+        <div class="container">
+            <div class="px-4 py-5 my-5 text-center">
+                <div class="official-pub-lbl mb-3">Official Publication</div>
+                <img src="./src/assets/images/HRSM23-Reverse.png" class="pub-logo" alt="HRD Summit Logo Image"
+                    loading="lazy">
+                <nav class="d-flex justify-content-center py-3">
+                    <ul class="nav nav-pills justify-content-center">
+                        <li class="nav-item"><a href="#speakers" class="nav-link">Speaker</a></li>
+                        <li class="nav-item"><a href="#agendaSection" class="nav-link">Schedule</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Register Now</a></li>
+                    </ul>
+                </nav>
+                <div class="d-flex justify-content-center py-3">
+                    <ul class="nav nav-pills justify-content-center">
+                        <li class="nav-item"><a href="#" class="nav-link">LinkedIn <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Twitter <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Facebook <img
+                                    src="./src/assets/images/socmed_arrow.svg" class="img-fluid" loading="lazy"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-bar">2023 © - KM Business Information Australia Pty Ltd. - All rights reserved</div>
+            </div>
+        </div>
+    </footer>
+    <!-- boostrap 5 scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- custom JavaScript here  -->
+</body>
+
+</html>

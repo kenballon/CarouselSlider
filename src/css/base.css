@@ -1,0 +1,224 @@
+:root {
+    --ff-primary: 'Inter', sans-serif
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--ff-primary);
+    font-size: var(--ff-primary);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with 
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+*/
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* #region CUSTOM UTILITY CLASSES */
+@media (max-width:991px) {
+    .d-hide-on-sm {
+        display: none;
+    }
+}
+
+.container {
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: 900px;
+    }
+}
+
+/* #endregion CUSTOM UTILITY CLASSES */
+
+.reg-cta-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 8px;
+
+    width: 161px;
+    height: 49px;
+
+    background-color: #1d064b;
+    border-radius: 50px;
+    cursor: pointer;
+
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: #A47CF4;
+
+        a {
+            color: #1d064b;
+        }
+    }
+}
+
+
+/*#region Agenda global classes */
+.agenda_heading-title {
+    &>* {
+        font-size: clamp(1.25rem, 4vw, 2rem);
+        font-weight: 500;
+        color: var(--theme-color-dark);
+        text-transform: capitalize;
+    }
+}
+
+.scheduled-time {
+    margin-bottom: 8px;
+
+    .schedulted__time {
+        font-size: 1.5rem;
+        color: var(--theme-color-light-one);
+    }
+
+    .schedulted__time_ampm {
+        color: var(--theme-color-light-one);
+        text-transform: uppercase;
+    }
+}
+
+.card-repeat__host-panel {
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+
+    .name-n-job-title {
+        & h6 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--theme-color-dark);
+            margin-bottom: 4px;
+        }
+
+        @media (max-width:991px) {
+            margin-top: 1rem;
+        }
+    }
+
+    .job-title-n-company {
+        line-height: 1.2em;
+        color: #1d064b;
+
+        &>span {
+            display: block;
+            font-size: 0.75rem;
+
+            &:last-child {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.host-or-panel__block {
+    .host-panel-heading {
+        border-bottom: 1px solid #acacac;
+        margin-bottom: 16px;
+
+        &>* {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--theme-color-dark);
+        }
+    }
+
+    .img-name-card {
+        grid-template-columns: repeat(2, 1fr);
+
+        & picture img {
+            border-radius: 100%;
+            border: 1px solid var(--theme-color-light-one);
+            object-fit: contain;
+        }
+
+        @media (max-width: 800px) {
+            .card-repeat__host-panel {
+                display: initial;
+
+                picture {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 800px) {
+            .card-repeat__host-panel {
+                display: initial;
+
+                picture {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 991px) {
+            grid-template-columns: auto;
+        }
+    }
+
+    .img-name-card.host-only {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*#endregion Agenda global classes */
