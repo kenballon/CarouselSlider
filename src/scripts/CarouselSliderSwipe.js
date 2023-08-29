@@ -1,16 +1,37 @@
+/**
+ * CarouselSlider Class
+ * A class to manage a carousel infinite slider with navigation buttons and optional autoplay.
+ * It expect the below parameters for it to work.
+ *
+ * @param {string} carouselParentClass - CSS class of the parent container of the slider.
+ * @param {string} prevBtn - CSS class of the previous button element.
+ * @param {string} nextBtn - CSS class of the next button element.
+ * @param {string} showPrevBtn - CSS class of the element to show the previous button.
+ * @param {boolean} autoplay - Set to true to enable autoplay, false to disable.
+ */
 export class CarouselSlider {
-  constructor(carouselParentClass, prevBtn, nextBtn, showPrevBtn) {
+  constructor(carouselParentClass, prevBtn, nextBtn, showPrevBtn, autoplay = true) {
     this.sliderParent = document.querySelector(carouselParentClass);
     this.showPreviousButton = document.querySelector(showPrevBtn);
     this.previousButton = prevBtn;
     this.nextButton = nextBtn;
-    this.sliderArray = this.sliderParent.children;
-    this.slideWidth = this.sliderArray[0].offsetWidth;
-    this.isTouched = false;
-    this.autoplayInterval = null;
 
-    this.setupEventListeners();
-    this.startAutoplay();
+    try {
+      this.sliderArray = this.sliderParent.children;
+      this.slideWidth = this.sliderArray[0].offsetWidth;
+      this.isTouched = false;
+      this.autoplayInterval = null;
+      this.autoPlayEnabled = autoplay;
+
+      this.setupEventListeners();
+
+      if (this.autoPlayEnabled) {
+        this.startAutoplay();
+      }
+
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
 
   setupEventListeners() {
@@ -134,9 +155,11 @@ export class CarouselSlider {
   };
 
   startAutoplay() {
-    this.autoplayInterval = setInterval(() => {
-      this.nextSlide();
-    }, 5000);
+    if (this.autoPlayEnabled) {
+      this.autoplayInterval = setInterval(() => {
+        this.nextSlide();
+      }, 5000);
+    }
   }
 
   stopAutoplay() {
